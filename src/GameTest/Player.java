@@ -3,15 +3,27 @@ package GameTest;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 
+/**
+ *Clasa Player reprezinta player-ul cu care ne vom juca .
+ * Clasa Player extinde SuperClasa Sprite ce contine metodele de initializarea imaginii , setarea coordonatelor ale imaginii, metodele ce vor returna vizibilitatea obiectului
+ */
+
 public class Player extends Sprite {
-    Game game;
+    /**
+     * Acesta variabila v-a fi initializata cu latimea imaginii player-ului
+     */
     private int width;
 
-    Player(Game game) {
-        this.game = game;
+    /**
+     * Constructorul v-a apela metoda initPlayer care v-a incarca imaginea si v-a crea player-ul cu o anumita pozitie data
+     */
+    Player() {
         initPlayer();
     }
 
+    /**
+     * Metoda apelata in constructor ce initiazileaza imaginea , si seteaza player-ul pe o pozitie in functie de x,y
+     */
     public void initPlayer() {
 
         var playerImg = "C:\\Users\\alex\\IdeaProjects\\JocProject\\src\\images\\player.png";
@@ -28,6 +40,9 @@ public class Player extends Sprite {
 
     }
 
+    /**
+     * Metoda act() v-a face update la pozitia jucatorului in functie de pozitia unde se afla in Frame
+     */
     public void act() {
 
         x += dx;
@@ -43,6 +58,9 @@ public class Player extends Sprite {
         }
     }
 
+    /**
+     * Am suprascris metoda keyPressed pentru a crea o definitie atunci cand sunt apasate tastele : Sageata Stanga si Sageata Dreapta pentru a misca player-ul
+     */
     public void keyPressed(KeyEvent e) {
 
         int key = e.getKeyCode();
@@ -58,6 +76,9 @@ public class Player extends Sprite {
         }
     }
 
+    /**
+     * Am suprascris metoda keyReleased pentru ca jucatorul sa se opreasca din miscare atunci cand nu se mai apasa vreo tasta
+     */
     public void keyReleased(KeyEvent e) {
 
         int key = e.getKeyCode();
