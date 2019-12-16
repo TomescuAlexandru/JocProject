@@ -291,7 +291,7 @@ public class Game extends JPanel {
     }
 
     /**
-     * TAdapter este o clasa interioara ce extinde un KeyAdapter care v-a implementa logica jocului atunci cand sunt apasate anumite butoane
+     * TAdapter este o clasa interioara ce extinde un KeyAdapter care va implementa logica jocului atunci cand sunt apasate anumite butoane
      */
     private class TAdapter extends KeyAdapter {
 

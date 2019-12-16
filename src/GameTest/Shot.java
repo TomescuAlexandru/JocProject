@@ -15,7 +15,6 @@ public class Shot extends Sprite {
      * Constructorul de initializare cu parametrii care v-a seta impuscatura pe o anumita pozitie in functie de acei parametrii
      */
     public Shot(int x, int y) {
-
         initShot(x, y);
     }
     /**
